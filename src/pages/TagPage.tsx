@@ -23,7 +23,7 @@ const TagPage: React.FC = () => {
 
   return (
     <div className="container" style={{ maxWidth: '500px' }}>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={handleSearch} query={tag} />
       <strong>{label}</strong>
       <PhotoList photos={photos} />
     </div>

@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
+  query?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
+const SearchBar: React.FC<SearchBarProps> = ({
+  onSearch,
+  query: queryProp,
+}) => {
+  const [query, setQuery] = useState(queryProp || '');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

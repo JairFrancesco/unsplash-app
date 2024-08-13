@@ -5,7 +5,7 @@ const UNSPLASH_BASE_URL = 'https://api.unsplash.com';
 const ACCESS_KEY = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
 const headers = {
   Authorization: `Client-ID ${ACCESS_KEY}`,
-}
+};
 
 export const fetchRandomPhotos = async () => {
   const response = await axios.get(`${UNSPLASH_BASE_URL}/photos/random`, {
@@ -36,17 +36,17 @@ export const searchPhotos = async (query: string) => {
 };
 
 export const loadPhotos = async () => {
-    try {
-      const randomPhotos = await fetchRandomPhotos();
-      const photosWithDetails = await Promise.all(
-        randomPhotos.map(async (photo: Photo) => {
-          const detailedPhoto = await fetchPhotoDetails(photo.id);
-          return { ...photo, ...detailedPhoto };
-        })
-      );
-      return photosWithDetails;
-    } catch (error) {
-      console.error("Failed to load photos", error);
-      throw error;
-    }
+  try {
+    const randomPhotos = await fetchRandomPhotos();
+    const photosWithDetails = await Promise.all(
+      randomPhotos.map(async (photo: Photo) => {
+        const detailedPhoto = await fetchPhotoDetails(photo.id);
+        return { ...photo, ...detailedPhoto };
+      })
+    );
+    return photosWithDetails;
+  } catch (error) {
+    console.error('Failed to load photos', error);
+    throw error;
+  }
 };

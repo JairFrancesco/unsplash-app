@@ -13,7 +13,7 @@ const useFetchRandomPhotos = () => {
         const photosWithDetails = await loadPhotos();
         setPhotos(photosWithDetails);
       } catch (err) {
-        setError("Failed to load photos");
+        setError('Failed to load photos');
         console.error(err);
       } finally {
         setLoading(false);

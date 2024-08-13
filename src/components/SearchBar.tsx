@@ -13,7 +13,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ marginTop: '10px' }}>
       <strong>Search by tag</strong>
       <div className="d-flex align-items-center">
         <input

@@ -1,5 +1,4 @@
 export interface Tag {
-  id: string;
   title: string;
 }
 
@@ -14,9 +13,7 @@ export interface User {
 export interface Photo {
   id: string;
   urls: Url;
-  title: string;
   tags: Tag[];
-  author: string;
   created_at: string;
   alt_description: string;
   user: User;

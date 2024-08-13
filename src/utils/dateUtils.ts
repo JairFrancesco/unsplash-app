@@ -4,6 +4,7 @@ export const formatDate = (dateString: string) => {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   };
 
   return `Taken on ${date.toLocaleDateString('en-US', options)}`;

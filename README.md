@@ -54,3 +54,10 @@ or
 ```
 npm run format
 ```
+
+### Screenshots
+
+<img width="1285" alt="Screenshot 2024-08-16 at 5 08 13 PM" src="https://github.com/user-attachments/assets/0ac04194-336c-4efd-b776-ab8091cf84d1">
+<img width="1329" alt="Screenshot 2024-08-16 at 5 08 35 PM" src="https://github.com/user-attachments/assets/6f99ffe8-a4d9-4a7c-8789-8cc8a55a83d6">
+
+
